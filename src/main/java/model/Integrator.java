@@ -8,17 +8,19 @@ public class Integrator{
     double BR = Parameters.BR;
     double DR= Parameters.DR;
     double DELTA_T = Parameters.DELTA_T;
-
+    double PR = Parameters.PR;
+    double ATR = Parameters.ATR;
+    
     public double AvailableWater() {
         // CÁLCULO DE LA INTEGRAL DE AGUA DISPONIBLE (AW)
         this.AW = this.AW + WB * DELTA_T; // AW(t) = AW(t-1) + WB * 1
         return this.AW;
     }
 
-    public double Waterbalance(){
+    public double Waterbalance(double PR){
         actualizarStocksDeCrecimiento();
         double WD = Equations.totalWaterDemand(POP, ISS);
-        double WS = Equations.totalWatersupply();
+        double WS = Equations.totalWatersupply(PR , ATR);
         this.WB = WS - WD; // WB = WS - WD
         return WB;
     }

@@ -1,6 +1,8 @@
 package model;
 
 public class Parameters {
+    public static final int currentyear = 2020;
+    public static final int simulationduration = 100;
     public static final double DELTA_T = 1.0;
     public static final double POP_INITIAL = 270955;
     public static final double ISS_INITIAL = 26739;

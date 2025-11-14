@@ -10,8 +10,8 @@ public class Equations{
         return DU + NDW + ANU + AISU + ISW;
     }
 
-    public static double totalWatersupply(){
-        double WS = Parameters.PR + Parameters.ATR;
+    public static double totalWatersupply(double PR, double ATR){
+        double WS = PR + ATR;
         return WS;
     }
 }

@@ -6,6 +6,7 @@ package graphics;
 
 import scenarioresults.FirstScenario;
 import scenarioresults.SecondScenario;
+import scenarioresults.ShowValues;
 
 /**
  *
@@ -311,8 +312,13 @@ public class MainInterface extends javax.swing.JFrame {
 
         buttonvaluescurrent.setForeground(new java.awt.Color(255, 255, 255));
         buttonvaluescurrent.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        buttonvaluescurrent.setText("Show current values");
+        buttonvaluescurrent.setText("Show values");
         buttonvaluescurrent.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonvaluescurrent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonvaluescurrentMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelvaluesLayout = new javax.swing.GroupLayout(panelvalues);
         panelvalues.setLayout(panelvaluesLayout);
@@ -363,6 +369,12 @@ public class MainInterface extends javax.swing.JFrame {
         scenary.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_secondscenarioMouseClicked
+
+    private void buttonvaluescurrentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonvaluescurrentMouseClicked
+        ShowValues mostrarvalores = new ShowValues();
+        mostrarvalores.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonvaluescurrentMouseClicked
 
     /**
      * @param args the command line arguments

@@ -15,16 +15,17 @@ public class Equations{
     /* Calcula la demanda total de agua para un año dado.
        Ecuación general: WD = DU + NDW + ANU + AISU + ISW
     */
-    public static double totalWaterDemand(double pop, double iss) {
+    public static double totalWaterDemandDynamic(double pop, double iss, double NWCP, double ISWCP) {
         double DU = Parameters.ADWCP * pop;
-        double NDW = Parameters.NWCP * pop * Parameters.FRACTION_NDW;
-        double ANU = Parameters.NWCP * pop * Parameters.FRACTION_ANU;
-        double AISU = iss * Parameters.ISWCP * Parameters.FRAC_IS_REAL;
-        double ISW = iss * Parameters.ISWCP * Parameters.FRAC_IS_WASTE;
+        double NDW = NWCP * pop * Parameters.FRACTION_NDW;
+        double ANU = NWCP * pop * Parameters.FRACTION_ANU;
+        double AISU = iss * ISWCP * Parameters.FRAC_IS_REAL;
+        double ISW = iss * ISWCP * Parameters.FRAC_IS_WASTE;
         
         double WD = ANU + AISU + DU + NDW + ISW;
         return WD;
-    }
+}
+
 
     /* Calcula la oferta total de agua disponible para el sistema.
        Ecuación del artículo:       WS = PR + ATR

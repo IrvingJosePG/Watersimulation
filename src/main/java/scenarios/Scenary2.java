@@ -4,10 +4,9 @@ import graphics.WaterCharts;
 import model.Integrator;
 import model.Parameters;
 
-public class Scenary1 {
+public class Scenary2 {
 
     public void run() {
-
         int start = Parameters.currentyear;
         int N = Parameters.simulationduration;
 
@@ -16,22 +15,24 @@ public class Scenary1 {
         double[] awOptimal = new double[N];
         double[] wbCurrent = new double[N];
         double[] wbOptimal = new double[N];
-        String text = " Variable: PR";
+        String text = " Variable: NWCP";
 
         // Integradores separados para el valor actual y optimo
         Integrator Icurrent = new Integrator();
         Integrator Ioptimal = new Integrator();
+        
+        double NWCP_OPTIMAL = 110; //Tomado de la tabla 3 articulo
 
         for (int i = 0; i < N; i++) {
             years[i] = start + i;
 
             // ESCENARIO ACTUAL
-            wbCurrent[i] = Icurrent.waterBalanceDynamic(Parameters.PR, Parameters.NWCP,
+            wbCurrent[i] = Icurrent.waterBalanceDynamic(Parameters.PR, Parameters.NWCP ,
                                                     Parameters.ISWCP,Parameters.BR, Parameters.DR, Parameters.NSR);
             awCurrent[i] = Icurrent.updateAvailableWater();
 
-            // ESCENARIO 1: PR óptimo ( +10% Rafsanjan adaptado a Oaxaca) 
-            wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR * 1.10, Parameters.NWCP,
+            // ESCENARIO 1: NWCP óptimo
+            wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR, NWCP_OPTIMAL,
                                                     Parameters.ISWCP,Parameters.BR, Parameters.DR, Parameters.NSR);
             awOptimal[i] = Ioptimal.updateAvailableWater();
         }
@@ -40,3 +41,4 @@ public class Scenary1 {
         WaterCharts.showCharts(years, wbCurrent, awCurrent, wbOptimal, awOptimal, text);
     }
 }
+

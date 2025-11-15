@@ -17,7 +17,6 @@ public class FirstScenario extends javax.swing.JFrame {
      * Creates new form FirstScenario
      */
     public FirstScenario() {
-        this.setLocation(400,200);
         initComponents();
     }
 
@@ -39,8 +38,8 @@ public class FirstScenario extends javax.swing.JFrame {
         returns = new javax.swing.JLabel();
         panelsimulation = new javax.swing.JPanel();
         simulation = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        text4 = new javax.swing.JLabel();
+        text5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -123,11 +122,11 @@ public class FirstScenario extends javax.swing.JFrame {
 
         gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 230, 125, 30));
 
-        jLabel1.setText("La PR se aumentó a 168,960,00 millones m^3/año (+10%");
-        gb.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 360, 15));
+        text4.setText("La PR se aumentó a 168,960,00 millones m^3/año (+10%");
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 360, 15));
 
-        jLabel2.setText("sobre el valor actual)");
-        gb.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 115, 360, 15));
+        text5.setText("sobre el valor actual)");
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 115, 360, 15));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,6 +140,7 @@ public class FirstScenario extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void returnsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnsMouseClicked
@@ -192,8 +192,6 @@ public class FirstScenario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel gb;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel panelreturns;
     private javax.swing.JPanel panelsimulation;
     private javax.swing.JLabel returns;
@@ -201,6 +199,8 @@ public class FirstScenario extends javax.swing.JFrame {
     private javax.swing.JLabel text1;
     private javax.swing.JLabel text2;
     private javax.swing.JLabel text3;
+    private javax.swing.JLabel text4;
+    private javax.swing.JLabel text5;
     private javax.swing.JLabel tittle;
     // End of variables declaration//GEN-END:variables
 }

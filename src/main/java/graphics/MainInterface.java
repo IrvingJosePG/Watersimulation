@@ -5,6 +5,7 @@
 package graphics;
 
 import scenarioresults.FirstScenario;
+import scenarioresults.SecondScenario;
 
 /**
  *
@@ -104,6 +105,11 @@ public class MainInterface extends javax.swing.JFrame {
         secondscenario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         secondscenario.setText("Second Scenario");
         secondscenario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        secondscenario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                secondscenarioMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelsecondLayout = new javax.swing.GroupLayout(panelsecond);
         panelsecond.setLayout(panelsecondLayout);
@@ -351,6 +357,12 @@ public class MainInterface extends javax.swing.JFrame {
         scenary.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_firstscenarioMouseClicked
+
+    private void secondscenarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_secondscenarioMouseClicked
+        SecondScenario scenary = new SecondScenario();
+        scenary.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_secondscenarioMouseClicked
 
     /**
      * @param args the command line arguments

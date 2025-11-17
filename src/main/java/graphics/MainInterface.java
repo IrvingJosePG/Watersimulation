@@ -18,7 +18,6 @@ public class MainInterface extends javax.swing.JFrame {
      * Creates new form MainInterface
      */
     public MainInterface() {
-        this.setLocation(400,150);
         initComponents();
     }
 
@@ -356,6 +355,7 @@ public class MainInterface extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void firstscenarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_firstscenarioMouseClicked

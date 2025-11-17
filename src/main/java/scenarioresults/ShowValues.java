@@ -5,18 +5,24 @@
 package scenarioresults;
 
 import graphics.MainInterface;
+import java.text.DecimalFormat;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import model.Parameters;
 
 /**
  *
  * @author irvingjose
  */
 public class ShowValues extends javax.swing.JFrame {
-
+    private static final DecimalFormat formatter = new DecimalFormat("#,###");
+    
     /**
      * Creates new form ShowCurrentValues
      */
     public ShowValues() {
         initComponents();
+        table();
     }
 
     /**
@@ -28,24 +34,26 @@ public class ShowValues extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        panelprincipal = new javax.swing.JPanel();
+        tittle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        valores = new javax.swing.JTable();
         panelreturns = new javax.swing.JPanel();
         returns = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(244, 241, 187));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelprincipal.setBackground(new java.awt.Color(244, 241, 187));
+        panelprincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Valores actuales y optimos");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
+        tittle.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
+        tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tittle.setText("Valores actuales y optimos");
+        panelprincipal.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 540, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        valores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -56,10 +64,10 @@ public class ShowValues extends javax.swing.JFrame {
                 "Variable", "Unidad", "Valor Actual", "Valor Optimo"
             }
         ));
-        jTable1.setSize(new java.awt.Dimension(360, 80));
-        jScrollPane1.setViewportView(jTable1);
+        valores.setSize(new java.awt.Dimension(360, 80));
+        jScrollPane1.setViewportView(valores);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 150));
+        panelprincipal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 500, 200));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -89,17 +97,17 @@ public class ShowValues extends javax.swing.JFrame {
                 .addComponent(returns, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 230, 130, 30));
+        panelprincipal.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 300, 130, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelprincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(panelprincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
         );
 
         pack();
@@ -112,6 +120,66 @@ public class ShowValues extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_returnsMouseClicked
 
+    public void table() {
+
+    // 1. Nombres de columnas
+    String[] columnNames = {"Variable", "Unidad", "Valor Actual", "Valor Óptimo"};
+
+    // 2. Datos de la tabla ya formateados
+    Object[][] data = {
+        {"Población (POP)", "personas",
+            formatter.format(Parameters.POP_INITIAL), "---"},
+        
+        {"Suscriptores (ISS)", "suscriptores",
+            formatter.format(Parameters.ISS_INITIAL), "-"},
+        
+        {"Penetracion (PR)", "m³/año",
+            formatter.format(Parameters.PR),
+            formatter.format(Parameters.PR * 1.10)},
+        
+        {"Consumo No Potable (NWCP)", "m³/persona-año",
+            formatter.format(Parameters.NWCP),
+            formatter.format(110)},
+        
+        {"Consumo Industrial (ISWCP)", "m³/suscriptor-año",
+            formatter.format(Parameters.ISWCP),
+            formatter.format(390)},
+        
+        {"Nacimientos (BR)", "personas/año",
+            formatter.format(Parameters.BR),
+            formatter.format(4485)},
+        
+        {"Defunciones (DR)", "personas/año",
+            formatter.format(Parameters.DR), "---"},
+        
+        {"Nuevos suscriptores (NSR)", "suscriptores/año",
+            formatter.format(Parameters.NSR),
+            formatter.format(708)},
+    };
+
+    // 3. Modelo de tabla
+    DefaultTableModel tableModel = new DefaultTableModel(data, columnNames) {
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false; // No editable
+        }
+    };
+
+    // 4. Aplicar modelo al JTable
+    valores.setModel(tableModel);
+
+    // 5. Permitir redimensionar columnas
+    valores.getTableHeader().setResizingAllowed(true);
+
+    // 6. Ajustar ancho inicial de columnas
+    valores.getColumnModel().getColumn(0).setPreferredWidth(180); // Variable
+    valores.getColumnModel().getColumn(1).setPreferredWidth(120);  // Unidad
+    valores.getColumnModel().getColumn(2).setPreferredWidth(100); // Valor actual
+    valores.getColumnModel().getColumn(3).setPreferredWidth(100); // Valor óptimo
+}
+
+
+    
     /**
      * @param args the command line arguments
      */
@@ -149,11 +217,11 @@ public class ShowValues extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JPanel panelprincipal;
     private javax.swing.JPanel panelreturns;
     private javax.swing.JLabel returns;
+    private javax.swing.JLabel tittle;
+    private javax.swing.JTable valores;
     // End of variables declaration//GEN-END:variables
 }

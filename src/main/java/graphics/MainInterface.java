@@ -7,6 +7,7 @@ package graphics;
 import scenarioresults.FirstScenario;
 import scenarioresults.SecondScenario;
 import scenarioresults.ShowValues;
+import scenarioresults.ThirdScenario;
 
 /**
  *
@@ -69,7 +70,6 @@ public class MainInterface extends javax.swing.JFrame {
         panelbuttons.setPreferredSize(new java.awt.Dimension(150, 250));
 
         panelfirst.setBackground(new java.awt.Color(0, 134, 190));
-        panelfirst.setSize(new java.awt.Dimension(130, 40));
 
         firstscenario.setFont(new java.awt.Font("PT Sans", 3, 14)); // NOI18N
         firstscenario.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,7 +98,6 @@ public class MainInterface extends javax.swing.JFrame {
         );
 
         panelsecond.setBackground(new java.awt.Color(0, 134, 190));
-        panelsecond.setSize(new java.awt.Dimension(130, 40));
 
         secondscenario.setFont(new java.awt.Font("PT Sans", 3, 14)); // NOI18N
         secondscenario.setForeground(new java.awt.Color(255, 255, 255));
@@ -127,13 +126,17 @@ public class MainInterface extends javax.swing.JFrame {
         );
 
         panelthird.setBackground(new java.awt.Color(0, 134, 190));
-        panelthird.setSize(new java.awt.Dimension(130, 40));
 
         thirdscenario.setFont(new java.awt.Font("PT Sans", 3, 14)); // NOI18N
         thirdscenario.setForeground(new java.awt.Color(255, 255, 255));
         thirdscenario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         thirdscenario.setText("Third Scenario");
         thirdscenario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        thirdscenario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                thirdscenarioMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelthirdLayout = new javax.swing.GroupLayout(panelthird);
         panelthird.setLayout(panelthirdLayout);
@@ -151,7 +154,6 @@ public class MainInterface extends javax.swing.JFrame {
         );
 
         panelfourth.setBackground(new java.awt.Color(0, 134, 190));
-        panelfourth.setSize(new java.awt.Dimension(130, 40));
 
         fourthscenario.setFont(new java.awt.Font("PT Sans", 3, 14)); // NOI18N
         fourthscenario.setForeground(new java.awt.Color(255, 255, 255));
@@ -175,7 +177,6 @@ public class MainInterface extends javax.swing.JFrame {
         );
 
         panelfifth.setBackground(new java.awt.Color(0, 134, 190));
-        panelfifth.setSize(new java.awt.Dimension(130, 40));
 
         fifthscenario.setFont(new java.awt.Font("PT Sans", 3, 14)); // NOI18N
         fifthscenario.setForeground(new java.awt.Color(255, 255, 255));
@@ -375,6 +376,12 @@ public class MainInterface extends javax.swing.JFrame {
         mostrarvalores.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_buttonvaluescurrentMouseClicked
+
+    private void thirdscenarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_thirdscenarioMouseClicked
+        ThirdScenario scenary = new ThirdScenario();
+        scenary.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_thirdscenarioMouseClicked
 
     /**
      * @param args the command line arguments

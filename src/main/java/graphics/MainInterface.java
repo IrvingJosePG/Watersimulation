@@ -4,7 +4,9 @@
  */
 package graphics;
 
+import scenarioresults.FifthScenario;
 import scenarioresults.FirstScenario;
+import scenarioresults.FourthScenario;
 import scenarioresults.SecondScenario;
 import scenarioresults.ShowValues;
 import scenarioresults.ThirdScenario;
@@ -160,6 +162,11 @@ public class MainInterface extends javax.swing.JFrame {
         fourthscenario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fourthscenario.setText("Fourth Scenario");
         fourthscenario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fourthscenario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fourthscenarioMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelfourthLayout = new javax.swing.GroupLayout(panelfourth);
         panelfourth.setLayout(panelfourthLayout);
@@ -183,6 +190,11 @@ public class MainInterface extends javax.swing.JFrame {
         fifthscenario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fifthscenario.setText("Fifth Scenario");
         fifthscenario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fifthscenario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fifthscenarioMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelfifthLayout = new javax.swing.GroupLayout(panelfifth);
         panelfifth.setLayout(panelfifthLayout);
@@ -248,7 +260,7 @@ public class MainInterface extends javax.swing.JFrame {
                 .addGroup(panelpresentationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(subtitle))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
         panelpresentationLayout.setVerticalGroup(
             panelpresentationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,7 +272,7 @@ public class MainInterface extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        bg.add(panelpresentation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 75));
+        bg.add(panelpresentation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 75));
 
         text1.setText("Modelo de Dinámica de Sistemas (SD)");
         bg.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, -1));
@@ -288,16 +300,14 @@ public class MainInterface extends javax.swing.JFrame {
 
         buttonallvariables.setForeground(new java.awt.Color(255, 255, 255));
         buttonallvariables.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        buttonallvariables.setText("Optimality of All Variables ");
+        buttonallvariables.setText("Optimalidad de todas las variables ");
         buttonallvariables.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelallvariablesLayout = new javax.swing.GroupLayout(panelallvariables);
         panelallvariables.setLayout(panelallvariablesLayout);
         panelallvariablesLayout.setHorizontalGroup(
             panelallvariablesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelallvariablesLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(buttonallvariables, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(buttonallvariables, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelallvariablesLayout.setVerticalGroup(
             panelallvariablesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -306,13 +316,13 @@ public class MainInterface extends javax.swing.JFrame {
                 .addComponent(buttonallvariables, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        bg.add(panelallvariables, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 170, 35));
+        bg.add(panelallvariables, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 220, 35));
 
         panelvalues.setBackground(new java.awt.Color(0, 134, 190));
 
         buttonvaluescurrent.setForeground(new java.awt.Color(255, 255, 255));
         buttonvaluescurrent.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        buttonvaluescurrent.setText("Show values");
+        buttonvaluescurrent.setText("Mostar valores");
         buttonvaluescurrent.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buttonvaluescurrent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -324,14 +334,14 @@ public class MainInterface extends javax.swing.JFrame {
         panelvalues.setLayout(panelvaluesLayout);
         panelvaluesLayout.setHorizontalGroup(
             panelvaluesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(buttonvaluescurrent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+            .addComponent(buttonvaluescurrent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
         panelvaluesLayout.setVerticalGroup(
             panelvaluesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(buttonvaluescurrent, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
-        bg.add(panelvalues, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 260, 170, 35));
+        bg.add(panelvalues, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 260, 140, 35));
 
         jLabel1.setText("Destacar que las gráficas en azul representan los");
         bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 205, 330, 15));
@@ -347,7 +357,7 @@ public class MainInterface extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -382,6 +392,18 @@ public class MainInterface extends javax.swing.JFrame {
         scenary.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_thirdscenarioMouseClicked
+
+    private void fourthscenarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fourthscenarioMouseClicked
+        FourthScenario scenary = new FourthScenario();
+        scenary.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_fourthscenarioMouseClicked
+
+    private void fifthscenarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fifthscenarioMouseClicked
+        FifthScenario scenary = new FifthScenario();
+        scenary.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_fifthscenarioMouseClicked
 
     /**
      * @param args the command line arguments

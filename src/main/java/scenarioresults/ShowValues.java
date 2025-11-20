@@ -67,7 +67,7 @@ public class ShowValues extends javax.swing.JFrame {
         valores.setSize(new java.awt.Dimension(360, 80));
         jScrollPane1.setViewportView(valores);
 
-        panelprincipal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 500, 200));
+        panelprincipal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 500, 160));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 

@@ -28,7 +28,7 @@ public class WaterCharts extends JFrame {
                        double[] wbOptimal, double[] awOptimal,
                        String text) {
 
-        setTitle("Oaxaca Water Simulation Results – Scenario 1");
+        setTitle("Escenario - Resultados de la simulación del agua de Oaxaca");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(950, 880);
         setLocationRelativeTo(null);
@@ -55,8 +55,8 @@ public class WaterCharts extends JFrame {
 
         // PANEL CENTRAL CON GRÁFICAS
         JPanel chartsPanel = new JPanel(new GridLayout(2, 1));
-        chartsPanel.add(createWaterBalanceChart(years, wbCurrent, wbOptimal, text));
         chartsPanel.add(createAvailableWaterChart(years, awCurrent, awOptimal, text));
+        chartsPanel.add(createWaterBalanceChart(years, wbCurrent, wbOptimal, text));
 
         mainPanel.add(chartsPanel, BorderLayout.CENTER);
         add(mainPanel);
@@ -67,8 +67,8 @@ public class WaterCharts extends JFrame {
                                                double[] optimal, String text) {
 
         // --- 1. Crear las series de datos ---
-        XYSeries s1 = new XYSeries("Water Balance – Current   "); // Serie azul: estado actual
-        XYSeries s2 = new XYSeries("Water Balance – Optimal   " + text); // Serie roja: estado óptimo 
+        XYSeries s1 = new XYSeries("Balance hídrico – Actual   "); // Serie azul: estado actual
+        XYSeries s2 = new XYSeries("Balance hídrico – Óptimo   " + text); // Serie roja: estado óptimo 
 
         // Llenamos las dos series con los valores año por año
         for (int i = 0; i < years.length; i++) {
@@ -83,9 +83,9 @@ public class WaterCharts extends JFrame {
         
         // --- 3. Crear el gráfico con JFreeChart ---
         JFreeChart chart = ChartFactory.createXYLineChart(
-                "Water Balance (WB)",       // Título del gráfico
-                "Year",                     // Etiqueta del eje X
-                "m³/year",                  // Etiqueta del eje Y
+                "Balance hídrico (WB)",       // Título del gráfico
+                "Año",                     // Etiqueta del eje X
+                "m³/Año",                  // Etiqueta del eje Y
                 dataset,                    // Conjunto de datos
                 PlotOrientation.VERTICAL,   // Orientación vertical del gráfico
                 true, true, false);         // Mostrar leyenda, Mostrar tooltips, No usar URLs
@@ -102,7 +102,7 @@ public class WaterCharts extends JFrame {
         chart.setBackgroundPaint(Color.WHITE);           // Fondo del contenedor del gráfico
         plot.setBackgroundPaint(Color.WHITE);            // Fondo del área donde están las curvas
         
-        // Creamos espacio interno para que la gráfica NO quede pegada arriba
+        // Creamos espacio interno para que la gráficA quede centrada
         plot.setAxisOffset(new RectangleInsets(10, 10, 10, 10));
 
         // --- 6. Activar la cuadrícula ---
@@ -111,13 +111,13 @@ public class WaterCharts extends JFrame {
         plot.setDomainGridlinePaint(Color.LIGHT_GRAY);   // Color de la cuadrícula vertical
         plot.setRangeGridlinePaint(Color.LIGHT_GRAY);    // Color de la cuadrícula horizontal
 
-        // --- 7. Personalizar líneas (renderer) ---
+        // --- 7. Personalizar líneas ---
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
         
         // ACTIVAR TOOLTIP FLOTANTE PARA MOSTRAR (X,Y)
         renderer.setDefaultToolTipGenerator(
             new StandardXYToolTipGenerator(
-                "{0}: (Year={1}, Value={2})",
+                "{0}: (Año={1}, Valor={2})",
                 new java.text.DecimalFormat("0"),
                 new java.text.DecimalFormat("#,##0.###")
             )
@@ -145,8 +145,8 @@ public class WaterCharts extends JFrame {
     private ChartPanel createAvailableWaterChart(double[] years, double[] current,
                                                  double[] optimal, String text) {
 
-        XYSeries s1 = new XYSeries("Available Water – Current   ");
-        XYSeries s2 = new XYSeries("Available Water – Optimal   " + text);
+        XYSeries s1 = new XYSeries("Agua disponible – Actual   ");
+        XYSeries s2 = new XYSeries("Agua disponible - Óptimo   " + text);
 
         for (int i = 0; i < years.length; i++) {
             s1.add(years[i], current[i]);
@@ -158,8 +158,8 @@ public class WaterCharts extends JFrame {
         dataset.addSeries(s2);
 
         JFreeChart chart = ChartFactory.createXYLineChart(
-                "Available Water (AW)",
-                "Year",
+                "Agua disponible (AW)",
+                "Año",
                 "m³",
                 dataset,
                 PlotOrientation.VERTICAL,
@@ -183,7 +183,7 @@ public class WaterCharts extends JFrame {
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
         renderer.setDefaultToolTipGenerator(
             new StandardXYToolTipGenerator(
-                "{0}: (Year={1}, Value={2})",
+                "{0}: (Año={1}, Valor={2})",
                 new java.text.DecimalFormat("0"),
                 new java.text.DecimalFormat("#,##0.###")
             )

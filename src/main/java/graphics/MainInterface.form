@@ -423,7 +423,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="text4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="A continuacion se muestran 5 escenarios dise&#xf1;ados"/>
+            <Property name="text" type="java.lang.String" value="Se simulan 5 escenarios dise&#xf1;ados con 5 variables"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[330, 20]"/>
             </Property>
@@ -436,7 +436,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="text5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="con 5 variables clave de sensibilidad y un escenario"/>
+            <Property name="text" type="java.lang.String" value="clave de sensibilidad y un escenario optimo con todas"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[330, 15]"/>
             </Property>
@@ -449,7 +449,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="text6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="optimo con todas las variables."/>
+            <Property name="text" type="java.lang.String" value="las variables."/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[230, 15]"/>
             </Property>

@@ -1,5 +1,6 @@
 package graphics;
 
+import interpretations.Interpretacion1;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -37,7 +38,11 @@ public class WaterCharts extends JFrame {
         JPanel mainPanel = new JPanel(new BorderLayout());
 
         // BARRA SUPERIOR CON BOTÓN
-        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        //Panel Superior
+        JPanel topPanel = new JPanel(new BorderLayout());
+        topPanel.setBackground(Color.WHITE);
+        
+        //Boton Regresar
         JButton backButton = new JButton("⬅ Regresar");
 
         // Acción del botón
@@ -49,8 +54,28 @@ public class WaterCharts extends JFrame {
                 dispose();
             }
         });
+        //Boton Interpretacion
+        JButton interpButton = new JButton("Interpretaciones ⬅");
+        // Acción del botón
+        interpButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Interpretacion1 inter = new Interpretacion1();
+                inter.setVisible(true);
+                dispose();
+            }
+        });
 
-        topPanel.add(backButton);
+        JLabel subtitle = new JLabel(
+            "Las gráficas AZULES representan valores ACTUALES y las ROJAS representan valores ÓPTIMOS.",
+            SwingConstants.CENTER
+            );
+        subtitle.setFont(new Font("PT Sans", Font.PLAIN, 13));
+        subtitle.setForeground(Color.DARK_GRAY);
+
+        topPanel.add(backButton, BorderLayout.WEST);
+        topPanel.add(subtitle, BorderLayout.CENTER);
+        topPanel.add(interpButton, BorderLayout.EAST);
         mainPanel.add(topPanel, BorderLayout.NORTH);
 
         // PANEL CENTRAL CON GRÁFICAS
@@ -92,26 +117,31 @@ public class WaterCharts extends JFrame {
 
         // Obtenemos el "plot" donde están las curvas
         XYPlot plot = chart.getXYPlot();
+        
+        // --- 4. Personalizar eje X con formato 2020 ---
+        NumberAxis xAxis = (NumberAxis) plot.getDomainAxis();
+        xAxis.setNumberFormatOverride(new java.text.DecimalFormat("0"));  
 
-        // --- 4. Personalizar eje Y con formato 5M / 3B ---
+
+        // --- 5. Personalizar eje Y con formato 5M / 3B ---
         NumberAxis yAxis = (NumberAxis) plot.getRangeAxis();
         yAxis.setNumberFormatOverride(new ShortNumberFormat());
         // ShortNumberFormat nos ayuda a convertir grandes números a: 1.2M, 3.5B, etc.
         
-         // --- 5. Fondo blanco y estilo profesional ---
+         // --- 6. Fondo blanco y estilo profesional ---
         chart.setBackgroundPaint(Color.WHITE);           // Fondo del contenedor del gráfico
         plot.setBackgroundPaint(Color.WHITE);            // Fondo del área donde están las curvas
         
         // Creamos espacio interno para que la gráficA quede centrada
         plot.setAxisOffset(new RectangleInsets(10, 10, 10, 10));
 
-        // --- 6. Activar la cuadrícula ---
+        // --- 7. Activar la cuadrícula ---
         plot.setDomainGridlinesVisible(true);            // Cuadrícula vertical
         plot.setRangeGridlinesVisible(true);             // Cuadrícula horizontal
         plot.setDomainGridlinePaint(Color.LIGHT_GRAY);   // Color de la cuadrícula vertical
         plot.setRangeGridlinePaint(Color.LIGHT_GRAY);    // Color de la cuadrícula horizontal
 
-        // --- 7. Personalizar líneas ---
+        // --- 8. Personalizar líneas ---
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
         
         // ACTIVAR TOOLTIP FLOTANTE PARA MOSTRAR (X,Y)
@@ -167,6 +197,9 @@ public class WaterCharts extends JFrame {
         
         XYPlot plot = chart.getXYPlot();
 
+        NumberAxis xAxis = (NumberAxis) plot.getDomainAxis();
+        xAxis.setNumberFormatOverride(new java.text.DecimalFormat("0"));  
+
         NumberAxis yAxis = (NumberAxis) plot.getRangeAxis();
         yAxis.setNumberFormatOverride(new ShortNumberFormat());
 
@@ -201,7 +234,7 @@ public class WaterCharts extends JFrame {
         plot.setRenderer(renderer);
 
         ChartPanel panel = new ChartPanel(chart);
-        panel.setMouseWheelEnabled(true);
+        panel.setMouseWheelEnabled(false);  //zoom a la grafica
 
         return panel;
     }

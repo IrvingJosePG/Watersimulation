@@ -284,15 +284,15 @@ public class MainInterface extends javax.swing.JFrame {
         text3.setText("bajo diferentes políticas.");
         bg.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
 
-        text4.setText("A continuacion se muestran 5 escenarios diseñados");
+        text4.setText("Se simulan 5 escenarios diseñados con 5 variables");
         text4.setPreferredSize(new java.awt.Dimension(330, 20));
         bg.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, -1, -1));
 
-        text5.setText("con 5 variables clave de sensibilidad y un escenario");
+        text5.setText("clave de sensibilidad y un escenario optimo con todas");
         text5.setPreferredSize(new java.awt.Dimension(330, 15));
         bg.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, -1, -1));
 
-        text6.setText("optimo con todas las variables.");
+        text6.setText("las variables.");
         text6.setPreferredSize(new java.awt.Dimension(230, 15));
         bg.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 185, -1, -1));
 

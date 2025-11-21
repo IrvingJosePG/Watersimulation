@@ -51,7 +51,7 @@ public class FirstScenario extends javax.swing.JFrame {
         tittle.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Resultados obtenidos en el primer escenario  ");
-        gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
         text1.setText("Se muestra el impacto de la tasa de infiltración (PR)");
         gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 15));
@@ -132,11 +132,11 @@ public class FirstScenario extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gb, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
+            .addComponent(gb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gb, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+            .addComponent(gb, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
         );
 
         pack();

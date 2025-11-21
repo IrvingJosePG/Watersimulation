@@ -27,130 +27,139 @@ public class ThirdScenario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        returns = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        simulation = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        gb = new javax.swing.JPanel();
+        tittle = new javax.swing.JLabel();
+        text1 = new javax.swing.JLabel();
+        text2 = new javax.swing.JLabel();
+        text3 = new javax.swing.JLabel();
+        text4 = new javax.swing.JLabel();
+        text5 = new javax.swing.JLabel();
+        text6 = new javax.swing.JLabel();
+        text7 = new javax.swing.JLabel();
+        panelreturns = new javax.swing.JPanel();
+        returns1 = new javax.swing.JLabel();
+        panelsimulation = new javax.swing.JPanel();
+        simulation1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(249, 249, 179));
-        jPanel1.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        gb.setBackground(new java.awt.Color(244, 241, 187));
+        gb.setForeground(new java.awt.Color(51, 51, 51));
+        gb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 3, 20)); // NOI18N
-        jLabel1.setText("Resultados obtenidos en el tercer escenario");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 450, -1));
+        tittle.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
+        tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tittle.setText("Resultados obtenidos en el tercer escenario");
+        gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
-        jPanel2.setBackground(new java.awt.Color(0, 153, 204));
+        text1.setText("Se muestra el efecto de la cantidad actual y óptima de");
+        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 15));
 
-        returns.setBackground(new java.awt.Color(126, 126, 235));
-        returns.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        returns.setForeground(new java.awt.Color(255, 255, 255));
-        returns.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        returns.setText("Regresar");
-        returns.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        returns.addMouseListener(new java.awt.event.MouseAdapter() {
+        text2.setText("consumo de agua industrial y de servicios por suscriptor");
+        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 360, 15));
+
+        text3.setText("(ISWCP) sobre la cantidad de agua disponible, así como");
+        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 360, 15));
+
+        text4.setText("Consumo industrial y de servicios por suscriptor (ISWCP)");
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 115, 360, 15));
+
+        text5.setText("toma el valor óptimo de 390 m³/suscriptor×año de");
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 360, 15));
+
+        text6.setText("sobre el balance hídrico, respectivamente.");
+        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 95, 360, 15));
+
+        text7.setText("acuerdo a los datos de la simulación.");
+        gb.add(text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 145, 360, 15));
+
+        panelreturns.setBackground(new java.awt.Color(0, 134, 190));
+
+        returns1.setFont(new java.awt.Font("PT Sans", 3, 14)); // NOI18N
+        returns1.setForeground(new java.awt.Color(255, 255, 255));
+        returns1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        returns1.setText("Regresar");
+        returns1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        returns1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                returnsMouseClicked(evt);
+                returns1MouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(returns, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelreturnsLayout = new javax.swing.GroupLayout(panelreturns);
+        panelreturns.setLayout(panelreturnsLayout);
+        panelreturnsLayout.setHorizontalGroup(
+            panelreturnsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelreturnsLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(returns, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(returns1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panelreturnsLayout.setVerticalGroup(
+            panelreturnsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelreturnsLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(returns1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 120, 30));
+        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 125, 30));
 
-        jPanel3.setBackground(new java.awt.Color(0, 153, 204));
+        panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
-        simulation.setBackground(new java.awt.Color(102, 102, 255));
-        simulation.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        simulation.setForeground(new java.awt.Color(255, 255, 255));
-        simulation.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        simulation.setText("Simulación");
-        simulation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        simulation.addMouseListener(new java.awt.event.MouseAdapter() {
+        simulation1.setFont(new java.awt.Font("PT Sans", 3, 14)); // NOI18N
+        simulation1.setForeground(new java.awt.Color(255, 255, 255));
+        simulation1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        simulation1.setText("Simulacion");
+        simulation1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        simulation1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                simulationMouseClicked(evt);
+                simulation1MouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelsimulationLayout = new javax.swing.GroupLayout(panelsimulation);
+        panelsimulation.setLayout(panelsimulationLayout);
+        panelsimulationLayout.setHorizontalGroup(
+            panelsimulationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelsimulationLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(simulation, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(simulation1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        panelsimulationLayout.setVerticalGroup(
+            panelsimulationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelsimulationLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(simulation, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(simulation1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 120, 30));
-
-        jLabel4.setText("Se muestra el efecto de la cantidad actual y óptima de consumo de agua ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
-
-        jLabel5.setText("industrial y de servicios por suscriptor (ISWCP) sobre la cantidad de ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
-
-        jLabel6.setText("agua disponible, así como sobre el balance hídrico, respectivamente.");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
-
-        jLabel7.setText(" Consumo industrial y de servicios por suscriptor (ISWCP) toma el valor ");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
-
-        jLabel8.setText("óptimo de 390 m³/suscriptor×año de acuerdo a los datos de la simulación.");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 125, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(gb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+            .addComponent(gb, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void returnsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnsMouseClicked
+    private void returns1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returns1MouseClicked
         MainInterface mi = new MainInterface();
         mi.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_returnsMouseClicked
+    }//GEN-LAST:event_returns1MouseClicked
 
-    private void simulationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_simulationMouseClicked
+    private void simulation1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_simulation1MouseClicked
         Scenary3 scenario = new Scenary3();
         scenario.run();
         this.dispose();
-    }//GEN-LAST:event_simulationMouseClicked
+    }//GEN-LAST:event_simulation1MouseClicked
                                    
     
     /**
@@ -189,16 +198,18 @@ public class ThirdScenario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel returns;
-    private javax.swing.JLabel simulation;
+    private javax.swing.JPanel gb;
+    private javax.swing.JPanel panelreturns;
+    private javax.swing.JPanel panelsimulation;
+    private javax.swing.JLabel returns1;
+    private javax.swing.JLabel simulation1;
+    private javax.swing.JLabel text1;
+    private javax.swing.JLabel text2;
+    private javax.swing.JLabel text3;
+    private javax.swing.JLabel text4;
+    private javax.swing.JLabel text5;
+    private javax.swing.JLabel text6;
+    private javax.swing.JLabel text7;
+    private javax.swing.JLabel tittle;
     // End of variables declaration//GEN-END:variables
 }

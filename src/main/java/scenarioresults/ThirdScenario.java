@@ -49,7 +49,7 @@ public class ThirdScenario extends javax.swing.JFrame {
         gb.setForeground(new java.awt.Color(51, 51, 51));
         gb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tittle.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
+        tittle.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Resultados obtenidos en el tercer escenario");
         gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));

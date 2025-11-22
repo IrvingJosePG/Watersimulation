@@ -1,13 +1,19 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package scenarios;
 
 import graphics.WaterCharts;
 import model.Integrator;
 import model.Parameters;
-
-public class Scenary3 {
-
-    public void run() {
+/**
+ *
+ * @author 52951
+ */
+public class Scenary5 {
+    
+     public void run() {
         int start = Parameters.currentyear;
         int N = Parameters.simulationduration;
 
@@ -16,27 +22,30 @@ public class Scenary3 {
         double[] awOptimal = new double[N];
         double[] wbCurrent = new double[N];
         double[] wbOptimal = new double[N];
-        String text = " Variable: ISWCP";
+        String text = " Variable: NSR (Nuevos Suscriptores)";
 
+        // Integradores separados para el valor actual y optimo
         Integrator Icurrent = new Integrator();
         Integrator Ioptimal = new Integrator();
         
-        double ISWCP_OPTIMAL = 390; // Valor directo de tu tabla
+        double NSR_OPTIMAL = 708; // Tomado de tu tabla
 
         for (int i = 0; i < N; i++) {
             years[i] = start + i;
 
             // ESCENARIO ACTUAL
             wbCurrent[i] = Icurrent.waterBalanceDynamic(Parameters.PR, Parameters.NWCP,
-                    Parameters.ISWCP, Parameters.BR, Parameters.DR, Parameters.NSR);
+                                                    Parameters.ISWCP, Parameters.BR, Parameters.DR, Parameters.NSR);
             awCurrent[i] = Icurrent.updateAvailableWater();
 
-            // ESCENARIO 3: ISWCP óptimo
+            // ESCENARIO 5: NSR óptimo (Nuevos Suscriptores)
             wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR, Parameters.NWCP,
-                    ISWCP_OPTIMAL, Parameters.BR, Parameters.DR, Parameters.NSR);
+                                                    Parameters.ISWCP, Parameters.BR, Parameters.DR, NSR_OPTIMAL);
             awOptimal[i] = Ioptimal.updateAvailableWater();
         }
 
+        // Mostrar gráfica
         WaterCharts.showCharts(years, wbCurrent, awCurrent, wbOptimal, awOptimal, text);
     }
+    
 }

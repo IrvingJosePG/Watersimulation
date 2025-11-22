@@ -2,6 +2,7 @@ package scenarios;
 
 import graphics.WaterCharts;
 import model.Integrator;
+import model.OptimalParameters;
 import model.Parameters;
 
 
@@ -31,8 +32,9 @@ public class AllVariables {
             awCurrent[i] = Icurrent.updateAvailableWater();
 
             // ESCENARIO ÓPTIMO
-            wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR * 1.10, 110 , 390 , 
-                                                    4485, Parameters.DR, 708);
+            wbOptimal[i] = Ioptimal.waterBalanceDynamic(OptimalParameters.PR_Optimal, OptimalParameters.NWCP_Optimal, 
+                                                    OptimalParameters.ISWCP_Optimal, OptimalParameters.BR_Optimal, Parameters.DR,
+                                                    OptimalParameters.NSR_Optimal);
             awOptimal[i] = Ioptimal.updateAvailableWater();
         }
 

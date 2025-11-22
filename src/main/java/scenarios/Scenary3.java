@@ -1,13 +1,14 @@
-
 package scenarios;
 
 import graphics.WaterCharts;
 import model.Integrator;
+import model.OptimalParameters;
 import model.Parameters;
 
 public class Scenary3 {
 
     public void run() {
+        
         int start = Parameters.currentyear;
         int N = Parameters.simulationduration;
 
@@ -18,10 +19,9 @@ public class Scenary3 {
         double[] wbOptimal = new double[N];
         String text = " Variable: ISWCP";
 
+        
         Integrator Icurrent = new Integrator();
         Integrator Ioptimal = new Integrator();
-        
-        double ISWCP_OPTIMAL = 390; // Valor directo de tu tabla
 
         for (int i = 0; i < N; i++) {
             years[i] = start + i;
@@ -33,10 +33,11 @@ public class Scenary3 {
 
             // ESCENARIO 3: ISWCP óptimo
             wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR, Parameters.NWCP,
-                    ISWCP_OPTIMAL, Parameters.BR, Parameters.DR, Parameters.NSR);
+                    OptimalParameters.ISWCP_Optimal , Parameters.BR, Parameters.DR, Parameters.NSR);
             awOptimal[i] = Ioptimal.updateAvailableWater();
         }
 
+        
         WaterCharts.showCharts(years, wbCurrent, awCurrent, wbOptimal, awOptimal, text);
     }
 }

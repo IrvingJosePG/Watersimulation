@@ -1,19 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package scenarios;
 
 import graphics.WaterCharts;
 import model.Integrator;
+import model.OptimalParameters;
 import model.Parameters;
-/**
- *
- * @author 52951
- */
+
 public class Scenary5 {
     
      public void run() {
+         
         int start = Parameters.currentyear;
         int N = Parameters.simulationduration;
 
@@ -27,8 +22,6 @@ public class Scenary5 {
         // Integradores separados para el valor actual y optimo
         Integrator Icurrent = new Integrator();
         Integrator Ioptimal = new Integrator();
-        
-        double NSR_OPTIMAL = 708; // Tomado de tu tabla
 
         for (int i = 0; i < N; i++) {
             years[i] = start + i;
@@ -40,12 +33,11 @@ public class Scenary5 {
 
             // ESCENARIO 5: NSR óptimo (Nuevos Suscriptores)
             wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR, Parameters.NWCP,
-                                                    Parameters.ISWCP, Parameters.BR, Parameters.DR, NSR_OPTIMAL);
+                                                    Parameters.ISWCP, Parameters.BR, Parameters.DR, OptimalParameters.NSR_Optimal);
             awOptimal[i] = Ioptimal.updateAvailableWater();
         }
 
         // Mostrar gráfica
         WaterCharts.showCharts(years, wbCurrent, awCurrent, wbOptimal, awOptimal, text);
-    }
-    
+    } 
 }

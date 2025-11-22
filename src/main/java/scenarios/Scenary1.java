@@ -2,6 +2,7 @@ package scenarios;
 
 import graphics.WaterCharts;
 import model.Integrator;
+import model.OptimalParameters;
 import model.Parameters;
 
 public class Scenary1 {
@@ -31,7 +32,7 @@ public class Scenary1 {
             awCurrent[i] = Icurrent.updateAvailableWater();
 
             // ESCENARIO 1: PR óptimo ( +10% Rafsanjan adaptado a Oaxaca) 
-            wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR * 1.10, Parameters.NWCP,
+            wbOptimal[i] = Ioptimal.waterBalanceDynamic(OptimalParameters.PR_Optimal , Parameters.NWCP,
                                                     Parameters.ISWCP,Parameters.BR, Parameters.DR, Parameters.NSR);
             awOptimal[i] = Ioptimal.updateAvailableWater();
         }

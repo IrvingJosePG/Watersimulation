@@ -48,19 +48,19 @@ public class FirstScenario extends javax.swing.JFrame {
         gb.setBackground(new java.awt.Color(244, 241, 187));
         gb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tittle.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
+        tittle.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Resultados obtenidos en el primer escenario  ");
         gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
-        text1.setText("Se muestra el impacto de la tasa de infiltración (PR)");
-        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 15));
+        text1.setText("Se muestra el impacto de la tasa de infiltración (PR) óptima");
+        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("óptima en la cantidad de agua disponible y en el balance");
-        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 360, 15));
+        text2.setText("en la cantidad de agua disponible y en el balance hídrico,");
+        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
 
-        text3.setText("hídrico, respectivamente.");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 360, 15));
+        text3.setText("respectivamente.");
+        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -90,7 +90,7 @@ public class FirstScenario extends javax.swing.JFrame {
                 .addComponent(returns, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 125, 30));
+        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 125, 30));
 
         panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -120,13 +120,13 @@ public class FirstScenario extends javax.swing.JFrame {
                 .addComponent(simulation, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 125, 30));
+        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 180, 125, 30));
 
-        text4.setText("La PR se aumentó a 168,960,00 millones m^3/año (+10%");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 360, 15));
+        text4.setText("La PR toma el valor optimo de 168,960,00 millones");
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 380, 15));
 
-        text5.setText("sobre el valor actual)");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 115, 360, 15));
+        text5.setText("m^3/año (+10% sobre el valor actual)");
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

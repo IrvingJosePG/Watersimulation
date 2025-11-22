@@ -37,7 +37,6 @@ public class SecondScenario extends javax.swing.JFrame {
         text4 = new javax.swing.JLabel();
         text5 = new javax.swing.JLabel();
         text6 = new javax.swing.JLabel();
-        text7 = new javax.swing.JLabel();
         panelsimulation = new javax.swing.JPanel();
         simulation = new javax.swing.JLabel();
         panelreturns = new javax.swing.JPanel();
@@ -51,31 +50,28 @@ public class SecondScenario extends javax.swing.JFrame {
         gb.setBackground(new java.awt.Color(244, 241, 187));
         gb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tittle.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
+        tittle.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Resultados obtenidos en el segundo escenario");
         gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
-        text1.setText("Se muestra el efecto de la cantidad actual y óptima de  ");
-        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 15));
+        text1.setText("Se muestra el impacto del consumo de agua no potable por");
+        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("consumo de agua no potable por persona sobre la");
-        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 360, 15));
+        text2.setText("persona sobre la cantidad de agua disponible, así como");
+        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
 
-        text3.setText("cantidad de agua disponible, así como sobre el balance");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 360, 15));
+        text3.setText("sobre el balance hídrico, respectivamente.");
+        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
 
-        text4.setText("hídrico, respectivamente.");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 95, 360, 15));
+        text4.setText("Consumo de agua no potable por persona (NWCP) toma el");
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 380, 15));
 
-        text5.setText("Consumo de agua no potable por persona (NWCP) toma");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 360, 15));
+        text5.setText("valor optimo de 110 m³/presona×año de acuerdo a los");
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
 
-        text6.setText("el valor optimo de 110 de acuerdo a datos del articulo");
-        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 135, 360, 15));
-
-        text7.setText("enfocado en la ciudad de Rafsanjan ");
-        gb.add(text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 360, 15));
+        text6.setText(" datos de simulación.");
+        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 15));
 
         panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -105,7 +101,7 @@ public class SecondScenario extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 230, 125, 30));
+        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 180, 125, 30));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -135,14 +131,14 @@ public class SecondScenario extends javax.swing.JFrame {
                 .addComponent(returns, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 125, 30));
-        gb.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 50, 20));
+        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 125, 30));
+        gb.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 50, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gb, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(gb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,7 +209,6 @@ public class SecondScenario extends javax.swing.JFrame {
     private javax.swing.JLabel text4;
     private javax.swing.JLabel text5;
     private javax.swing.JLabel text6;
-    private javax.swing.JLabel text7;
     private javax.swing.JLabel tittle;
     // End of variables declaration//GEN-END:variables
 }

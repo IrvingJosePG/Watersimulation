@@ -48,7 +48,7 @@ public class ShowValues extends javax.swing.JFrame {
         panelprincipal.setBackground(new java.awt.Color(244, 241, 187));
         panelprincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tittle.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
+        tittle.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Valores actuales y optimos");
         panelprincipal.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 540, -1));
@@ -97,7 +97,7 @@ public class ShowValues extends javax.swing.JFrame {
                 .addComponent(returns, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        panelprincipal.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 300, 130, 30));
+        panelprincipal.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 230, 130, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,7 +107,7 @@ public class ShowValues extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelprincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+            .addComponent(panelprincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
 
         pack();

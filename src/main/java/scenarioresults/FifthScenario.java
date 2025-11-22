@@ -37,7 +37,6 @@ public class FifthScenario extends javax.swing.JFrame {
         text3 = new javax.swing.JLabel();
         text4 = new javax.swing.JLabel();
         text5 = new javax.swing.JLabel();
-        text6 = new javax.swing.JLabel();
         panelreturns = new javax.swing.JPanel();
         returns1 = new javax.swing.JLabel();
         panelsimulation = new javax.swing.JPanel();
@@ -51,28 +50,25 @@ public class FifthScenario extends javax.swing.JFrame {
         gb.setForeground(new java.awt.Color(51, 51, 51));
         gb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tittle.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        tittle.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Resultados obtenidos en el quinto escenario");
         gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
-        text1.setText("Se muestra el efecto de la cantidad actual y óptima");
-        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 15));
+        text1.setText("Se muestra el impacto de nuevos suscriptores industriales");
+        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("de nuevos suscriptores  industriales y de servicios (NSR)");
-        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 360, 15));
+        text2.setText("y de servicios (NSR) sobre la cantidad de agua disponible,");
+        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
 
-        text3.setText("sobre la cantidad de agua disponible, así como sobre");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 360, 15));
+        text3.setText("así como sobre balance hídrico, respectivamente.");
+        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
 
-        text4.setText("Nuevos suscriptores (NSR) toma el valor óptimo de ");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 115, 360, 15));
+        text4.setText("Nuevos suscriptores (NSR) toma el valor óptimo de 708");
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
 
-        text5.setText("708 suscriptores/año acuerdo a los datos de la simulación.");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 360, 15));
-
-        text6.setText("balance hídrico, respectivamente.");
-        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 95, 360, 15));
+        text5.setText("suscriptores/año (-5.47% sobre el valor actual).");
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 15));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -102,7 +98,7 @@ public class FifthScenario extends javax.swing.JFrame {
                 .addComponent(returns1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 125, 30));
+        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 125, 30));
 
         panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -132,7 +128,7 @@ public class FifthScenario extends javax.swing.JFrame {
                 .addComponent(simulation1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 125, 30));
+        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 180, 125, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -206,7 +202,6 @@ public class FifthScenario extends javax.swing.JFrame {
     private javax.swing.JLabel text3;
     private javax.swing.JLabel text4;
     private javax.swing.JLabel text5;
-    private javax.swing.JLabel text6;
     private javax.swing.JLabel tittle;
     // End of variables declaration//GEN-END:variables
 }

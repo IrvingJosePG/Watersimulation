@@ -49,31 +49,31 @@ public class ThirdScenario extends javax.swing.JFrame {
         gb.setForeground(new java.awt.Color(51, 51, 51));
         gb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tittle.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        tittle.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Resultados obtenidos en el tercer escenario");
         gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
-        text1.setText("Se muestra el efecto de la cantidad actual y óptima de");
-        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 15));
+        text1.setText("Se muestra el impacto del consumo de agua industrial y");
+        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("consumo de agua industrial y de servicios por suscriptor");
-        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 360, 15));
+        text2.setText("de servicios por suscriptor (ISWCP) sobre la cantidad de");
+        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
 
-        text3.setText("(ISWCP) sobre la cantidad de agua disponible, así como");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 360, 15));
+        text3.setText("agua disponible, así como sobre el balance hídrico,");
+        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
 
         text4.setText("Consumo industrial y de servicios por suscriptor (ISWCP)");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 115, 360, 15));
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
 
-        text5.setText("toma el valor óptimo de 390 m³/suscriptor×año de");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 360, 15));
+        text5.setText("toma el valor óptimo de 390 m³/suscriptor×año de acuerdo");
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 15));
 
-        text6.setText("sobre el balance hídrico, respectivamente.");
-        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 95, 360, 15));
+        text6.setText("respectivamente.");
+        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, 380, 15));
 
-        text7.setText("acuerdo a los datos de la simulación.");
-        gb.add(text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 145, 360, 15));
+        text7.setText("a los datos de la simulación.");
+        gb.add(text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 145, 380, 15));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -103,7 +103,7 @@ public class ThirdScenario extends javax.swing.JFrame {
                 .addComponent(returns1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 125, 30));
+        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 125, 30));
 
         panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -133,7 +133,7 @@ public class ThirdScenario extends javax.swing.JFrame {
                 .addComponent(simulation1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 125, 30));
+        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 180, 125, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

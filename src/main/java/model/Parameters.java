@@ -36,8 +36,8 @@ public class Parameters {
     public static final double FRAC_IS_WASTE = 0.2;  // Pérdidas
 
     // Tasa de natalidad y mortalidad
-    public static final double BR = 1924;
-    public static final double DR = 4744;
+    public static final double BR = 4744;
+    public static final double DR = 1924;
 
     // Factores NDW / ANU del artículo
     public static final double FRACTION_NDW = 0.3;  // 30% del agua no potable → aguas residuales retornables

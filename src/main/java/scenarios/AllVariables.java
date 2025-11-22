@@ -16,7 +16,7 @@ public class AllVariables {
         double[] awOptimal = new double[N];
         double[] wbCurrent = new double[N];
         double[] wbOptimal = new double[N];
-        String text = " Variable: PR";
+        String text = " Variable: PR, NWCP, ISWCP, BR , NSR";
 
         // Integradores separados para el valor actual y optimo
         Integrator Icurrent = new Integrator();
@@ -30,9 +30,9 @@ public class AllVariables {
                                                     Parameters.ISWCP,Parameters.BR, Parameters.DR, Parameters.NSR);
             awCurrent[i] = Icurrent.updateAvailableWater();
 
-            // ESCENARIO 1: PR óptimo ( +10% Rafsanjan adaptado a Oaxaca) 
-            wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR * 1.10, 110 ,
-                                                    Parameters.ISWCP,Parameters.BR, Parameters.DR, Parameters.NSR);
+            // ESCENARIO ÓPTIMO
+            wbOptimal[i] = Ioptimal.waterBalanceDynamic(Parameters.PR * 1.10, 110 , 390 , 
+                                                    4485, Parameters.DR, 708);
             awOptimal[i] = Ioptimal.updateAvailableWater();
         }
 

@@ -29,13 +29,13 @@ public class AllVariablesScenario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        gb = new javax.swing.JPanel();
         panelsimulation = new javax.swing.JPanel();
         simulation = new javax.swing.JLabel();
         panelreturns = new javax.swing.JPanel();
         returns = new javax.swing.JLabel();
         tittle = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        esp = new javax.swing.JLabel();
         text1 = new javax.swing.JLabel();
         text2 = new javax.swing.JLabel();
 
@@ -43,8 +43,8 @@ public class AllVariablesScenario extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(244, 241, 187));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        gb.setBackground(new java.awt.Color(244, 241, 187));
+        gb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -74,7 +74,7 @@ public class AllVariablesScenario extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 230, 125, 30));
+        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 180, 125, 30));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -104,29 +104,31 @@ public class AllVariablesScenario extends javax.swing.JFrame {
                 .addComponent(returns, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 125, 30));
+        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 125, 30));
 
         tittle.setFont(new java.awt.Font("PT Sans", 3, 20)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Escenario con todas las variables");
-        jPanel1.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 50, 20));
+        gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
+        gb.add(esp, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 50, 20));
 
         text1.setText("Una situación en la que todas las variables están en sus");
-        jPanel1.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 15));
+        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, 15));
 
         text2.setText("valores óptimos.");
-        jPanel1.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 360, 15));
+        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 360, 15));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(gb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(gb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -181,8 +183,8 @@ public class AllVariablesScenario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel esp;
+    private javax.swing.JPanel gb;
     private javax.swing.JPanel panelreturns;
     private javax.swing.JPanel panelsimulation;
     private javax.swing.JLabel returns;

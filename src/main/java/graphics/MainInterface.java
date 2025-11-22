@@ -4,6 +4,7 @@
  */
 package graphics;
 
+import scenarioresults.AllVariablesScenario;
 import scenarioresults.FifthScenario;
 import scenarioresults.FirstScenario;
 import scenarioresults.FourthScenario;
@@ -290,7 +291,7 @@ public class MainInterface extends javax.swing.JFrame {
 
         text5.setText("clave de sensibilidad y un escenario optimo con todas");
         text5.setPreferredSize(new java.awt.Dimension(330, 15));
-        bg.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, -1, -1));
+        bg.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 360, -1));
 
         text6.setText("las variables.");
         text6.setPreferredSize(new java.awt.Dimension(230, 15));
@@ -302,6 +303,11 @@ public class MainInterface extends javax.swing.JFrame {
         buttonallvariables.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         buttonallvariables.setText("Optimalidad de todas las variables ");
         buttonallvariables.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonallvariables.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonallvariablesMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelallvariablesLayout = new javax.swing.GroupLayout(panelallvariables);
         panelallvariables.setLayout(panelallvariablesLayout);
@@ -322,7 +328,7 @@ public class MainInterface extends javax.swing.JFrame {
 
         buttonvaluescurrent.setForeground(new java.awt.Color(255, 255, 255));
         buttonvaluescurrent.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        buttonvaluescurrent.setText("Mostar valores");
+        buttonvaluescurrent.setText("Mostrar valores");
         buttonvaluescurrent.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buttonvaluescurrent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -404,6 +410,12 @@ public class MainInterface extends javax.swing.JFrame {
         scenary.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_fifthscenarioMouseClicked
+
+    private void buttonallvariablesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonallvariablesMouseClicked
+        AllVariablesScenario scenary = new AllVariablesScenario();
+        scenary.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonallvariablesMouseClicked
 
     /**
      * @param args the command line arguments

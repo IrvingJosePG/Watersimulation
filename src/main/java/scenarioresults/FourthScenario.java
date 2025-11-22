@@ -50,25 +50,25 @@ public class FourthScenario extends javax.swing.JFrame {
         gb.setForeground(new java.awt.Color(51, 51, 51));
         gb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tittle.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        tittle.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
         tittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tittle.setText("Resultados obtenidos en el cuarto escenario");
         gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
-        text1.setText("Se muestra el efecto de la cantidad actual y óptima");
-        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 370, 15));
+        text1.setText("Se muestra el impacto de la natalidad (BR) sobre la cantidad");
+        gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("de natalidad (BR)  sobre la cantidad de agua disponible,");
-        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 360, 15));
+        text2.setText("de agua disponible, así como sobre el balance hidríco");
+        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
 
         text3.setText("así como sobre el balance hídrico, respectivamente.");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 360, 15));
+        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
 
-        text4.setText("Natalidad (BR) toma el valor óptimo de ");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 115, 360, 15));
+        text4.setText("Natalidad (BR) toma el valor óptimo de 4,485 personas/año");
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
 
-        text5.setText("4,485 personas/año de acuerdo a los datos de la simulación");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 360, 15));
+        text5.setText("(-5.5% sobre el valor actual).");
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 15));
         gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 95, 360, 15));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
@@ -99,7 +99,7 @@ public class FourthScenario extends javax.swing.JFrame {
                 .addComponent(returns1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 125, 30));
+        gb.add(panelreturns, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 125, 30));
 
         panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -129,7 +129,7 @@ public class FourthScenario extends javax.swing.JFrame {
                 .addComponent(simulation1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 125, 30));
+        gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 180, 125, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -1,6 +1,11 @@
 package graphics;
 
 import interpretations.Interpretacion1;
+import interpretations.Interpretacion2;
+import interpretations.Interpretacion3;
+import interpretations.Interpretacion4;
+import interpretations.Interpretacion5;
+import interpretations.Interpretacionfinal;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,7 +19,6 @@ import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.chart.ui.RectangleInsets;
 import org.jfree.data.xy.*;
 import utils.ShortNumberFormat;
-
 /**
  * Genera un JFrame con dos gráficas lineales:
  *  1. Water Balance (WB)
@@ -23,11 +27,16 @@ import utils.ShortNumberFormat;
  */
 
 public class WaterCharts extends JFrame {
+    
+    private int escenario;
 
     public WaterCharts(double[] years,
-                       double[] wbCurrent, double[] awCurrent,
-                       double[] wbOptimal, double[] awOptimal,
-                       String text) {
+                   double[] wbCurrent, double[] awCurrent,
+                   double[] wbOptimal, double[] awOptimal,
+                   String text,
+                   int escenario) {
+
+        this.escenario = escenario;
 
         setTitle("Escenario - Resultados de la simulación del agua de Oaxaca");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -60,9 +69,32 @@ public class WaterCharts extends JFrame {
         interpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Interpretacion1 inter = new Interpretacion1();
-                inter.setVisible(true);
-                dispose();
+                // Abrir la interpretación correspondiente según escenarioActual
+        switch (escenario) {
+            case 1:
+                new Interpretacion1().setVisible(true);
+                break;
+            case 2:
+                new Interpretacion2().setVisible(true);
+                break;
+            case 3:
+                new Interpretacion3().setVisible(true);
+                break;
+            case 4:
+                new Interpretacion4().setVisible(true);
+                break;
+            case 5:
+                new Interpretacion5().setVisible(true);
+                break;
+            case 6:
+                new Interpretacionfinal().setVisible(true);
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "No hay escenario seleccionado.");
+                return;
+        }
+
+        dispose();
             }
         });
 
@@ -242,12 +274,12 @@ public class WaterCharts extends JFrame {
     //   MÉTODO PARA MOSTRAR LOS GRÁFICOS
     public static void showCharts(
             double[] years, double[] wbCurrent, double[] awCurrent,
-            double[] wbOptimal, double[] awOptimal, String text) {
+            double[] wbOptimal, double[] awOptimal, String text, int escenario) {
 
         SwingUtilities.invokeLater(() -> {
             WaterCharts frame = new WaterCharts(
                     years, wbCurrent, awCurrent,
-                    wbOptimal, awOptimal, text );
+                    wbOptimal, awOptimal, text, escenario );
             frame.setVisible(true);
         });
     }

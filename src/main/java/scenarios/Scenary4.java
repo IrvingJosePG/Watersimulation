@@ -38,6 +38,6 @@ public class Scenary4 {
         }
 
         // Mostrar gráfica
-        WaterCharts.showCharts(years, wbCurrent, awCurrent, wbOptimal, awOptimal, text);
+        WaterCharts.showCharts(years, wbCurrent, awCurrent, wbOptimal, awOptimal, text, 4);
     }
 }

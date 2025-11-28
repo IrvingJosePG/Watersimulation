@@ -34,7 +34,6 @@ public class FifthScenario extends javax.swing.JFrame {
         tittle = new javax.swing.JLabel();
         text1 = new javax.swing.JLabel();
         text2 = new javax.swing.JLabel();
-        text3 = new javax.swing.JLabel();
         text4 = new javax.swing.JLabel();
         text5 = new javax.swing.JLabel();
         panelreturns = new javax.swing.JPanel();
@@ -58,17 +57,14 @@ public class FifthScenario extends javax.swing.JFrame {
         text1.setText("Se muestra el impacto de nuevos suscriptores industriales");
         gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("y de servicios (NSR) sobre la cantidad de agua disponible,");
+        text2.setText("y de servicios (NSR) óptimo.");
         gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
 
-        text3.setText("así como sobre balance hídrico, respectivamente.");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
-
         text4.setText("Nuevos suscriptores (NSR) toma el valor óptimo de 708");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, 380, 15));
 
         text5.setText("suscriptores/año (-5.47% sobre el valor actual).");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 15));
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 380, 15));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -199,7 +195,6 @@ public class FifthScenario extends javax.swing.JFrame {
     private javax.swing.JLabel simulation1;
     private javax.swing.JLabel text1;
     private javax.swing.JLabel text2;
-    private javax.swing.JLabel text3;
     private javax.swing.JLabel text4;
     private javax.swing.JLabel text5;
     private javax.swing.JLabel tittle;

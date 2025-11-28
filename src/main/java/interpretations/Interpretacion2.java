@@ -42,6 +42,7 @@ public class Interpretacion2 extends javax.swing.JFrame {
         panelsimulation = new javax.swing.JPanel();
         simulation = new javax.swing.JLabel();
         esp = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -59,7 +60,7 @@ public class Interpretacion2 extends javax.swing.JFrame {
         gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 390, 15));
 
         text2.setText("acuífero (NWCP), las gráficas muestran que el agua disponible (AW) ");
-        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 390, 15));
+        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 400, 15));
 
         text3.setText("aumenta más rápido en el escenario óptimo, por eso la línea roja ");
         gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 390, 15));
@@ -68,16 +69,16 @@ public class Interpretacion2 extends javax.swing.JFrame {
         gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 95, 390, 15));
 
         text5.setText("Esto quiere decir que con un mejor manejo, el acuífero logra mantener ");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 390, 15));
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 420, 15));
 
         text6.setText("más agua a lo largo de los años. En el balance hídrico (WB) ambas,");
-        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 135, 390, 15));
+        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 135, 395, 15));
 
         text7.setText("líneas bajan pero la roja lo hace más lentamente. ");
         gb.add(text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 390, 15));
 
-        text8.setText("Esto indica que el déficit de agua se reduce y la pérdida anual es menor.");
-        gb.add(text8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 165, 390, 15));
+        text8.setText("Esto indica que el déficit de agua se reduce y la pérdida anual");
+        gb.add(text8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 165, 440, 15));
 
         panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -110,11 +111,16 @@ public class Interpretacion2 extends javax.swing.JFrame {
         gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 130, 30));
         gb.add(esp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 285, 30, 15));
 
+        jLabel1.setText("es menor.");
+        gb.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(gb, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,6 +175,7 @@ public class Interpretacion2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel esp;
     private javax.swing.JPanel gb;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelsimulation;
     private javax.swing.JLabel simulation;
     private javax.swing.JLabel text1;

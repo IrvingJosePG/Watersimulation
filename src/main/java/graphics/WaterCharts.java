@@ -31,101 +31,160 @@ public class WaterCharts extends JFrame {
     private int escenario;
 
     public WaterCharts(double[] years,
-                   double[] wbCurrent, double[] awCurrent,
-                   double[] wbOptimal, double[] awOptimal,
-                   String text,
-                   int escenario) {
+                       double[] wbCurrent, double[] awCurrent,
+                       double[] wbOptimal, double[] awOptimal,
+                       String text,
+                       int escenario) {
 
         this.escenario = escenario;
 
-        setTitle("Escenario - Resultados de la simulación del agua de Oaxaca");
+        setTitle("Resultados de la simulación del agua de Oaxaca");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(950, 880);
         setLocationRelativeTo(null);
 
-        // PANEL PRINCIPAL (BORDERLAYOUT) — arriba botón, centro gráficas
+        // PANEL PRINCIPAL
         JPanel mainPanel = new JPanel(new BorderLayout());
 
-        // BARRA SUPERIOR CON BOTÓN
-        //Panel Superior
+        // ---------------- PANEL SUPERIOR ----------------
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setBackground(Color.WHITE);
-        
-        //Boton Regresar
+
+        // Botón regresar
         JButton backButton = new JButton("⬅ Regresar");
-
-        // Acción del botón
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                MainInterface mi = new MainInterface();
-                mi.setVisible(true);
-                dispose();
-            }
+        backButton.addActionListener(e -> {
+            MainInterface mi = new MainInterface();
+            mi.setVisible(true);
+            dispose();
         });
-        //Boton Interpretacion
+
+        // Botón Interpretaciones
         JButton interpButton = new JButton("Interpretaciones ⬅");
-        // Acción del botón
-        interpButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Abrir la interpretación correspondiente según escenarioActual
-        switch (escenario) {
-            case 1:
-                new Interpretacion1().setVisible(true);
-                break;
-            case 2:
-                new Interpretacion2().setVisible(true);
-                break;
-            case 3:
-                new Interpretacion3().setVisible(true);
-                break;
-            case 4:
-                new Interpretacion4().setVisible(true);
-                break;
-            case 5:
-                new Interpretacion5().setVisible(true);
-                break;
-            case 6:
-                new Interpretacionfinal().setVisible(true);
-                break;
-            default:
-                JOptionPane.showMessageDialog(null, "No hay escenario seleccionado.");
-                return;
-        }
-
-        dispose();
+        interpButton.addActionListener(e -> {
+            switch (escenario) {
+                case 1 -> new Interpretacion1().setVisible(true);
+                case 2 -> new Interpretacion2().setVisible(true);
+                case 3 -> new Interpretacion3().setVisible(true);
+                case 4 -> new Interpretacion4().setVisible(true);
+                case 5 -> new Interpretacion5().setVisible(true);
+                case 6 -> new Interpretacionfinal().setVisible(true);
+                default -> JOptionPane.showMessageDialog(null, "No hay escenario seleccionado.");
             }
+            dispose();
         });
 
-        JLabel subtitle = new JLabel(
-            "Las gráficas AZULES representan valores ACTUALES y las ROJAS representan valores ÓPTIMOS.",
-            SwingConstants.CENTER
-            );
+        JLabel subtitle = new JLabel( "Resultado del escenario sobre la " + text, 
+                                SwingConstants.CENTER );
+
         subtitle.setFont(new Font("PT Sans", Font.PLAIN, 13));
         subtitle.setForeground(Color.DARK_GRAY);
 
         topPanel.add(backButton, BorderLayout.WEST);
         topPanel.add(subtitle, BorderLayout.CENTER);
-        topPanel.add(interpButton, BorderLayout.EAST);
+       // topPanel.add(interpButton, BorderLayout.EAST);
+
         mainPanel.add(topPanel, BorderLayout.NORTH);
 
-        // PANEL CENTRAL CON GRÁFICAS
+        // ---------------- INTERPRETACIONES ----------------
+        String interpAW = "";
+        String interpWB = "";
+
+        switch (escenario) {
+            case 1 -> {
+                interpAW = "Si se produce 10% mas de agua se aumenta el agua almacenada con el paso de los años.";
+                interpWB = "El suministro de agua contra la demanda urbana mejora debido a mayor recarga de agua que consumo. Pero se sigue agotando con los años";
+            }
+            case 2 -> {
+                interpAW = "Reducir el consumo no potable de las personas aumenta el agua disponible a traves de los años.";
+                interpWB = "El suministro de agua mejora gracias a menor demanda por persona.";
+            }
+            case 3 -> {
+                interpAW = "Menor consumo industrial ayuda a conservar el agua disponible pero en menor efecto.";
+                interpWB = "No se tiene un efecto considerable, se sigue reflejando una menor demanda industrial.";
+            }
+            case 4 -> {
+                interpAW = "Las disminucion de natalidad modifica lentamente la disponibilidad del agua.";
+                interpWB = "El suministro de agua contra la demanada de agua se mantiene casi igual y se sigue agotando con los años.";
+            }
+            case 5 -> {
+                interpAW = "No se observan cambios en el agua disponible, se sigue almacenando el agua.";
+                interpWB = "El suministro de agua se agota mas rapido a traves de los años.";
+            }
+            case 6 -> {
+                interpAW = "Con todas las variables optimizadas, se observa agua disponible sin sufir una crisis de agua.";
+                interpWB = "El suministro de agua domina sobre la demanda de agua al aplicar todas las mejoras.";
+            }
+        }
+
+        // Definiciones FIJAS para todas las gráficas
+        String defAW = "Cantidad de agua almacenada en los próximos años, considerando cuánta agua entra.";
+        String defWB = "Muestra si entra más agua de la que se usa. Si entra más es positivo. Si se usa más es negativo.";
+
+        // ---------------- PANEL CENTRAL ----------------
         JPanel chartsPanel = new JPanel(new GridLayout(2, 1));
-        chartsPanel.add(createAvailableWaterChart(years, awCurrent, awOptimal, text));
-        chartsPanel.add(createWaterBalanceChart(years, wbCurrent, wbOptimal, text));
+
+        // GRAFICAS
+        ChartPanel awChart = createAvailableWaterChart(years, awCurrent, awOptimal, text);
+        ChartPanel wbChart = createWaterBalanceChart(years, wbCurrent, wbOptimal, text);
+
+        // ENCAPSULAR CADA GRÁFICA CON SU TEXTO + DEFINICIÓN
+        chartsPanel.add(wrapChartWithInterpretation(awChart, interpAW, defAW));
+        chartsPanel.add(wrapChartWithInterpretation(wbChart, interpWB, defWB));
 
         mainPanel.add(chartsPanel, BorderLayout.CENTER);
+
         add(mainPanel);
     }
+
+    // ---------------- MÉTODO: Envolver gráfica + interpretación + definición ----------------
+    private JPanel wrapChartWithInterpretation(ChartPanel chart, String interpretation, String definition) {
+        JPanel p = new JPanel();
+        p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
+        p.setBackground(Color.WHITE);
+
+        chart.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        // Panel horizontal para colocar interpretación + definición
+        JPanel textRow = new JPanel(new GridLayout(1, 2));
+        textRow.setBackground(Color.WHITE);
+
+        JLabel interpLabel = new JLabel(
+                "<html><div style='text-align:center; padding:5px;'>" +
+                interpretation +
+                "</div></html>"
+        );
+        interpLabel.setFont(new Font("PT Sans", Font.PLAIN, 12));
+        interpLabel.setForeground(Color.DARK_GRAY);
+
+        JLabel defLabel = new JLabel(
+                "<html><div style='text-align:center; padding:5px;'><b>Definición:</b> " +
+                definition +
+                "</div></html>"
+        );
+        defLabel.setFont(new Font("PT Sans", Font.PLAIN, 12));
+        defLabel.setForeground(new Color(60, 60, 60));
+
+        // Añadir ambos textos en la misma fila
+        textRow.add(interpLabel);
+        textRow.add(defLabel);
+
+        // Agregar al panel main debajo de la gráfica
+        p.add(chart);
+        p.add(Box.createVerticalStrut(6));
+        p.add(textRow);
+
+        return p;
+    }
+
+
 
     //   GRAFICA 1 – WATER BALANCE
     private ChartPanel createWaterBalanceChart(double[] years, double[] current,
                                                double[] optimal, String text) {
 
         // --- 1. Crear las series de datos ---
-        XYSeries s1 = new XYSeries("Balance hídrico – Actual   "); // Serie azul: estado actual
-        XYSeries s2 = new XYSeries("Balance hídrico – Óptimo   " + text); // Serie roja: estado óptimo 
+        XYSeries s1 = new XYSeries("La AZUL muestra la proyeccion sin aplicar mejoras   "); // Serie azul: estado actual
+        XYSeries s2 = new XYSeries("La ROJA muestra la proyeccion con mejoras   " + text); // Serie roja: estado óptimo 
 
         // Llenamos las dos series con los valores año por año
         for (int i = 0; i < years.length; i++) {
@@ -207,8 +266,8 @@ public class WaterCharts extends JFrame {
     private ChartPanel createAvailableWaterChart(double[] years, double[] current,
                                                  double[] optimal, String text) {
 
-        XYSeries s1 = new XYSeries("Agua disponible – Actual   ");
-        XYSeries s2 = new XYSeries("Agua disponible - Óptimo   " + text);
+        XYSeries s1 = new XYSeries("La AZUL muestra la proyeccion sin aplicar mejoras   ");
+        XYSeries s2 = new XYSeries("La ROJA muestra la proyeccion con mejoras   " + text);
 
         for (int i = 0; i < years.length; i++) {
             s1.add(years[i], current[i]);

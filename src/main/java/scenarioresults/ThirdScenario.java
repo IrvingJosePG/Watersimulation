@@ -31,10 +31,8 @@ public class ThirdScenario extends javax.swing.JFrame {
         tittle = new javax.swing.JLabel();
         text1 = new javax.swing.JLabel();
         text2 = new javax.swing.JLabel();
-        text3 = new javax.swing.JLabel();
         text4 = new javax.swing.JLabel();
         text5 = new javax.swing.JLabel();
-        text6 = new javax.swing.JLabel();
         text7 = new javax.swing.JLabel();
         panelreturns = new javax.swing.JPanel();
         returns1 = new javax.swing.JLabel();
@@ -57,23 +55,17 @@ public class ThirdScenario extends javax.swing.JFrame {
         text1.setText("Se muestra el impacto del consumo de agua industrial y");
         gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("de servicios por suscriptor (ISWCP) sobre la cantidad de");
+        text2.setText("de servicios por suscriptor (ISWCP) óptimo.");
         gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
 
-        text3.setText("agua disponible, así como sobre el balance hídrico,");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
-
         text4.setText("Consumo industrial y de servicios por suscriptor (ISWCP)");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 380, 15));
 
         text5.setText("toma el valor óptimo de 390 m³/suscriptor×año de acuerdo");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 15));
-
-        text6.setText("respectivamente.");
-        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, 380, 15));
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, 380, 15));
 
         text7.setText("a los datos de la simulación.");
-        gb.add(text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 145, 380, 15));
+        gb.add(text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 380, 15));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -205,10 +197,8 @@ public class ThirdScenario extends javax.swing.JFrame {
     private javax.swing.JLabel simulation1;
     private javax.swing.JLabel text1;
     private javax.swing.JLabel text2;
-    private javax.swing.JLabel text3;
     private javax.swing.JLabel text4;
     private javax.swing.JLabel text5;
-    private javax.swing.JLabel text6;
     private javax.swing.JLabel text7;
     private javax.swing.JLabel tittle;
     // End of variables declaration//GEN-END:variables

@@ -32,8 +32,6 @@ public class FirstScenario extends javax.swing.JFrame {
         gb = new javax.swing.JPanel();
         tittle = new javax.swing.JLabel();
         text1 = new javax.swing.JLabel();
-        text2 = new javax.swing.JLabel();
-        text3 = new javax.swing.JLabel();
         panelreturns = new javax.swing.JPanel();
         returns = new javax.swing.JLabel();
         panelsimulation = new javax.swing.JPanel();
@@ -53,14 +51,8 @@ public class FirstScenario extends javax.swing.JFrame {
         tittle.setText("Resultados obtenidos en el primer escenario  ");
         gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
-        text1.setText("Se muestra el impacto de la tasa de infiltración (PR) óptima");
+        text1.setText("Se muestra el impacto de la Tasa de Infiltración (PR) óptima.");
         gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
-
-        text2.setText("en la cantidad de agua disponible y en el balance hídrico,");
-        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
-
-        text3.setText("respectivamente.");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -122,11 +114,11 @@ public class FirstScenario extends javax.swing.JFrame {
 
         gb.add(panelsimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 180, 125, 30));
 
-        text4.setText("La PR toma el valor optimo de 168,960,00 millones");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 380, 15));
+        text4.setText("La PR toma el valor óptimo de 168,960,00 millones");
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
 
         text5.setText("m^3/año (+10% sobre el valor actual)");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, 380, 15));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,8 +189,6 @@ public class FirstScenario extends javax.swing.JFrame {
     private javax.swing.JLabel returns;
     private javax.swing.JLabel simulation;
     private javax.swing.JLabel text1;
-    private javax.swing.JLabel text2;
-    private javax.swing.JLabel text3;
     private javax.swing.JLabel text4;
     private javax.swing.JLabel text5;
     private javax.swing.JLabel tittle;

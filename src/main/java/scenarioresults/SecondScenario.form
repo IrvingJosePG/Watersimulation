@@ -72,21 +72,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="text2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="persona sobre la cantidad de agua disponible, as&#xed; como"/>
+            <Property name="text" type="java.lang.String" value="persona (NWCP) &#xf3;ptimo."/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="65" width="380" height="15"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="javax.swing.JLabel" name="text3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="sobre el balance h&#xed;drico, respectivamente."/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="80" width="380" height="15"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -96,27 +86,27 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="100" width="380" height="15"/>
+              <AbsoluteConstraints x="10" y="90" width="380" height="15"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="text5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="valor optimo de 110 m&#xb3;/presona&#xd7;a&#xf1;o de acuerdo a los"/>
+            <Property name="text" type="java.lang.String" value="valor &#xf3;ptimo de 110 m&#xb3;/presona&#xd7;a&#xf1;o de acuerdo a los"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="115" width="380" height="15"/>
+              <AbsoluteConstraints x="10" y="105" width="380" height="15"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="text6">
           <Properties>
-            <Property name="text" type="java.lang.String" value=" datos de simulaci&#xf3;n."/>
+            <Property name="text" type="java.lang.String" value="datos de simulaci&#xf3;n."/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="130" width="380" height="15"/>
+              <AbsoluteConstraints x="10" y="120" width="380" height="15"/>
             </Constraint>
           </Constraints>
         </Component>

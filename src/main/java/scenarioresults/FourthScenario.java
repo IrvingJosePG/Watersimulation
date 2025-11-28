@@ -32,8 +32,6 @@ public class FourthScenario extends javax.swing.JFrame {
         gb = new javax.swing.JPanel();
         tittle = new javax.swing.JLabel();
         text1 = new javax.swing.JLabel();
-        text2 = new javax.swing.JLabel();
-        text3 = new javax.swing.JLabel();
         text4 = new javax.swing.JLabel();
         text5 = new javax.swing.JLabel();
         text6 = new javax.swing.JLabel();
@@ -55,20 +53,14 @@ public class FourthScenario extends javax.swing.JFrame {
         tittle.setText("Resultados obtenidos en el cuarto escenario");
         gb.add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
 
-        text1.setText("Se muestra el impacto de la natalidad (BR) sobre la cantidad");
+        text1.setText("Se muestra el impacto de la Natalidad (BR) óptima.");
         gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("de agua disponible, así como sobre el balance hidríco");
-        gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
-
-        text3.setText("así como sobre el balance hídrico, respectivamente.");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
-
         text4.setText("Natalidad (BR) toma el valor óptimo de 4,485 personas/año");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 380, 15));
 
         text5.setText("(-5.5% sobre el valor actual).");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 15));
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, 380, 15));
         gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 95, 360, 15));
 
         panelreturns.setBackground(new java.awt.Color(0, 134, 190));
@@ -199,8 +191,6 @@ public class FourthScenario extends javax.swing.JFrame {
     private javax.swing.JLabel returns1;
     private javax.swing.JLabel simulation1;
     private javax.swing.JLabel text1;
-    private javax.swing.JLabel text2;
-    private javax.swing.JLabel text3;
     private javax.swing.JLabel text4;
     private javax.swing.JLabel text5;
     private javax.swing.JLabel text6;

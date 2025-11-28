@@ -285,17 +285,17 @@ public class MainInterface extends javax.swing.JFrame {
         text3.setText("bajo diferentes políticas.");
         bg.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
 
-        text4.setText("Se simulan 5 escenarios diseñados con 5 variables");
+        text4.setText("Se simulan 5 escenarios con 5 variables clave de");
         text4.setPreferredSize(new java.awt.Dimension(330, 20));
-        bg.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, -1, -1));
+        bg.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 145, -1, -1));
 
-        text5.setText("clave de sensibilidad y un escenario optimo con todas");
+        text5.setText("sensibilidad y un escenario optimo con todas las");
         text5.setPreferredSize(new java.awt.Dimension(330, 15));
-        bg.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 360, -1));
+        bg.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 165, 360, -1));
 
-        text6.setText("las variables.");
+        text6.setText("variables.");
         text6.setPreferredSize(new java.awt.Dimension(230, 15));
-        bg.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 185, -1, -1));
+        bg.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
 
         panelallvariables.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -349,13 +349,13 @@ public class MainInterface extends javax.swing.JFrame {
 
         bg.add(panelvalues, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 260, 140, 35));
 
-        jLabel1.setText("Destacar que las gráficas en azul representan los");
-        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 205, 330, 15));
+        jLabel1.setText("En las gráficas las líneas AZULES muestran la");
+        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 205, 350, 15));
 
-        jLabel2.setText("valores actuales, mientras que las gráficas en rojo");
+        jLabel2.setText("la proyeccion sin aplicar mejoras, y las ROJAS");
         bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 330, 15));
 
-        jLabel3.setText("los valores óptimos.");
+        jLabel3.setText("muestran la proyeccion con mejoras");
         bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 235, 330, 15));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

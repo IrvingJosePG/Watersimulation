@@ -33,7 +33,6 @@ public class SecondScenario extends javax.swing.JFrame {
         tittle = new javax.swing.JLabel();
         text1 = new javax.swing.JLabel();
         text2 = new javax.swing.JLabel();
-        text3 = new javax.swing.JLabel();
         text4 = new javax.swing.JLabel();
         text5 = new javax.swing.JLabel();
         text6 = new javax.swing.JLabel();
@@ -58,20 +57,17 @@ public class SecondScenario extends javax.swing.JFrame {
         text1.setText("Se muestra el impacto del consumo de agua no potable por");
         gb.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 380, 15));
 
-        text2.setText("persona sobre la cantidad de agua disponible, así como");
+        text2.setText("persona (NWCP) óptimo.");
         gb.add(text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, 380, 15));
 
-        text3.setText("sobre el balance hídrico, respectivamente.");
-        gb.add(text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 380, 15));
-
         text4.setText("Consumo de agua no potable por persona (NWCP) toma el");
-        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 380, 15));
+        gb.add(text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 380, 15));
 
-        text5.setText("valor optimo de 110 m³/presona×año de acuerdo a los");
-        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 115, 380, 15));
+        text5.setText("valor óptimo de 110 m³/presona×año de acuerdo a los");
+        gb.add(text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, 380, 15));
 
-        text6.setText(" datos de simulación.");
-        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 15));
+        text6.setText("datos de simulación.");
+        gb.add(text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 380, 15));
 
         panelsimulation.setBackground(new java.awt.Color(0, 134, 190));
 
@@ -205,7 +201,6 @@ public class SecondScenario extends javax.swing.JFrame {
     private javax.swing.JLabel simulation;
     private javax.swing.JLabel text1;
     private javax.swing.JLabel text2;
-    private javax.swing.JLabel text3;
     private javax.swing.JLabel text4;
     private javax.swing.JLabel text5;
     private javax.swing.JLabel text6;

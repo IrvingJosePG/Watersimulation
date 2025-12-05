@@ -59,7 +59,7 @@ public class WaterCharts extends JFrame {
         });
 
         // Botón Interpretaciones
-        JButton interpButton = new JButton("Interpretaciones ⬅");
+        JButton interpButton = new JButton("Interpretaciones Técnicas ⬅");
         interpButton.addActionListener(e -> {
             switch (escenario) {
                 case 1 -> new Interpretacion1().setVisible(true);
@@ -81,7 +81,7 @@ public class WaterCharts extends JFrame {
 
         topPanel.add(backButton, BorderLayout.WEST);
         topPanel.add(subtitle, BorderLayout.CENTER);
-       // topPanel.add(interpButton, BorderLayout.EAST);
+        topPanel.add(interpButton, BorderLayout.EAST);
 
         mainPanel.add(topPanel, BorderLayout.NORTH);
 
